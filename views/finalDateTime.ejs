@@ -1,0 +1,19 @@
+<%- include('header') %>
+
+
+<body>
+
+<h1>Show a Date and Time Control</h1>
+
+
+
+<form action="/api/accept-appointment/edit/<%= Appointment._id %>" method="post">
+  <label for="birthdaytime">Set Appointment date and time:</label>
+  <input type="datetime-local" id="birthdaytime" name="schedule">
+  <input type="submit">
+</form>
+
+
+
+</body>
+<%- include('footer') %>

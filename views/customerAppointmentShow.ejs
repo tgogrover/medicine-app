@@ -1,0 +1,41 @@
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="/css/appointmentShowCustomer.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<div class="container">
+  <% Appointment.forEach(function(medicine) { %>
+    <div class="card">
+      <div class="card-header">
+        <img src="/doctorUploads/<%= medicine.doctor.Profile_Image[0].Image %>" alt="rover" />
+      </div>
+      <div class="card-body">
+        <span class="tag tag-teal"><a  href="/api/dashboard">DASHBOARD </a></span>
+        <h4>
+         DOCTOR's NAME = <%= medicine.doctor.Full_Name %> <br>
+        
+      
+         
+        </h4>
+        
+        </div>
+        <p> CLINIC = <%= medicine.doctor.Clinic %></p>
+        <h2><%= medicine.doctor.Degree %></h2>
+      </p>
+     
+     
+         MOBILE NUMBER = <%= medicine.doctor.Mobile_Number %>
+        </p>
+        <div class="user">
+          <img src="/logo.jpg" alt="user" />
+          <div class="user-info">
+            <h5><%= medicine.dateTime %></h5>
+            <small>Few Seconds Ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }) %>  
+    
+</div>

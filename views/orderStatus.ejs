@@ -1,0 +1,59 @@
+<head>
+	<title>PHARMACY APP</title>
+	<link rel="stylesheet" type="text/css" href="/css/status.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+
+<div class="container mt-5">
+    <% if(Error !='') {%>
+        <h3 style="color: red"><b><%= Error %></b></h3>
+      <% } %>
+     
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+            <div class="rounded">
+                <div class="table-responsive table-borderless">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">
+                                    
+                                        <div class="inner-circle">Billing By</div>
+                                    
+                                </th>
+                                <th>Order #</th>
+                                <th>Order Email</th>
+                                <th>status</th>
+                                <th>Total</th>
+                                <th>Created</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <% Message.forEach(function(message,index) { %>
+                            <tr class="cell-1">
+                                <td class="text-center">
+                                    
+                                        <div class="inner-circle"><%= index + 1 %></div>
+                                    
+                                </td>
+                                
+                                <td><%= message._id %></td>
+                                <td><%= Email %></td>
+                                <td><span class="badge badge-success"><%= message.Order_Status %></span></td>
+                                <td>₹  <%= message.Total_Amount %></td>
+                                <td>Today</td>
+                                <td><i class="fa fa-ellipsis-h text-black-50"><a  href="/api/dashboard">DASHBOARD</a></i></td>
+                            </tr>
+                            <% }) %>     
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

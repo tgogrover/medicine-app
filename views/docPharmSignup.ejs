@@ -1,0 +1,81 @@
+<head>
+	<title>PHARMACY APP</title>
+	<link rel="stylesheet" type="text/css" href="/css/docPharmSign.css">
+
+</head>
+
+<form action="/api/doctors/signup" method="post" enctype="multipart/form-data">
+  
+    <h1><strong>Doctors's Signup</strong></h1>
+    
+    <div class="form-group">
+      <% if(Error !='') {%>
+        <h3 style="color: red"><b><%= Error %></b></h3>
+      <% } %>
+      <% if(Message) {%>
+        <h3 style="color: green"><b><%= Message %></b></h3>
+        <% } %>
+      <label for="title"><span>Full Name</span></label>
+      <input type="text" name="fullName" id="title" class="form-controll"/>
+    </div>
+    <div class="form-group">
+      <label for="title"><span>Email</span></label>
+      <input type="email" name="email" id="title" class="form-controll"/>
+    </div>
+    <div class="form-group">
+      <label for="caption"><span>Password</span></label>
+      <input type="password" name="password" id="caption" class="form-controll"/>
+    </div>
+    <div class="form-group">
+      <label for="caption"><span>Clinic</span></label>
+      <input type="text" name="clinic" id="caption" class="form-controll"/>
+    </div>
+    <div class="form-group">
+      <label for="caption"><span>Mobile Number</span></label>
+      <input type="number" name="contacts" id="caption" class="form-controll"/>
+    </div>
+    <div class="form-group">
+      <label for="caption"><span>Degree</span></label>
+      <input type="text" name="degree" id="caption" class="form-controll"/>
+    </div>
+    <div class="form-group">
+        <label for="caption"><span>Role</span></label>
+       <select id="caption" class="form-controll" name="role">
+        <option value="Doctors">Doctors</option>
+        <option value="Pharmacist">Pharmacist</option>
+       </select> 
+    </div>
+    <!-- 'Bones','Skin','Cardio','Eyes,Nose,Ears' -->
+    <div class="form-group">
+      <label for="caption"><span>Specialization</span></label>
+      <select id="caption" class="form-controll" name="specs">
+      <option value='Bones'>Bones</option>
+      <option value='Skin'>Skin</option>
+      <option value='Cardio'>Cardio</option>
+      <option value='Eyes,Nose,Ears'>Eyes,Nose,Ears</option>
+     </select> 
+  </div>
+    
+    <div class="form-group file-area">
+          <label for="images"><span>Your images should be at least 400x300 wide</span></label>
+      <input type="file" name="images" id="images" required="required" multiple="multiple"/>
+      <div class="file-dummy">
+        <div class="success">Great, your files are selected. Keep on.</div>
+        <div class="default">Please select some files</div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <button type="submit">Sign Up</button>
+    </div>
+    
+  </form>
+  
+  
+  
+  
+  
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700' rel='stylesheet' type='text/css'>
+  
+  <a href="http://scribblerockerz.com/drag-n-drop-file-input-without-javascript/" class="back-to-article" target="_blank">back to Article</a>
