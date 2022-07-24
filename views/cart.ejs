@@ -44,7 +44,7 @@
 								 							<div class="product-info">
 									 					<div>Name: <span class="value"><%= cart.MedicineId.Name %></span></div>
 									 							<div>Description: <span class="value"><%= cart.MedicineId.Description %></span></div>
-									 							<div>Memory: <span class="value">32GB</span></div>
+									 							<div> <span class="value">In Stock</span></div>
 									 						</div>
 									 					</div>
 							 						</div>
@@ -92,7 +92,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     // Create an instance of the Stripe object with your publishable API key
-    var stripe = Stripe("pk_test_51KXiUISF3sNBAnKOPYbeF8HlUzgcYyM52hMyRCHp2BEZnyPatrCidozz3dDE6esHSv45DDBqCLabcPthuX1CiHbM00cgyEFGqb");
+    var stripe = Stripe("pk_test_51KXiUISF3sNBAnKOVnCmDnkEqG5krwLZhbFO3mOMjJobBdttGVgYczFtUmPPJHHZj2LoEKvuAO1WavzZyR0H4rn100biRKmxM3");
     var checkoutButton = document.getElementById("btn");
 
     checkoutButton.addEventListener("click", function () {
